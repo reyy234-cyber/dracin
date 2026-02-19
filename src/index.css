@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure Tailwind includes these color classes for dynamic platform icons */
+/* bg-red-600 bg-purple-600 bg-blue-600 bg-yellow-600 bg-pink-600 bg-teal-600 bg-green-600 bg-indigo-600 */
+
+/* Custom global styles */
+body {
+  @apply font-inter bg-gray-900 text-gray-100;
+}
+
+/* Hide scrollbars on horizontal card lists */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animation for skeleton loading */
+.skeleton {
+  @apply animate-pulse bg-gray-800 rounded;
+}

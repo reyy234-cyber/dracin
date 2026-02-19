@@ -1,0 +1,35 @@
+/* Removed FontAwesome import; icons are provided as inline SVG components. */
+
+/* Import the Inter font from Google Fonts. This enables a modern, clean
+   typography across the application. If the import fails (e.g. offline), the
+   browser will fall back to the default sans-serif font. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure Tailwind includes these color classes for dynamic platform icons */
+/* bg-red-600 bg-purple-600 bg-blue-600 bg-yellow-600 bg-pink-600 bg-teal-600 bg-green-600 bg-indigo-600 */
+
+/* Custom global styles */
+body {
+  /* Use the imported Inter font and a dark gradient background. The
+     gradient subtly changes from dark gray to black for a more polished
+     appearance. */
+  @apply font-sans bg-gradient-to-b from-gray-900 via-gray-900 to-black text-gray-100;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hide scrollbars on horizontal card lists */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Animation for skeleton loading */
+.skeleton {
+  @apply animate-pulse bg-gray-800 rounded;
+}
